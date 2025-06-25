@@ -3,6 +3,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 
 public class GameTest {
 
@@ -27,8 +28,8 @@ public class GameTest {
         game.register(player7);
         game.register(player9);
 
-        ArrayList<Player> registered = game.findAll();
-        Player[] actual = {registered.get(0), registered.get(1), registered.get(2), registered.get(3), registered.get(4)};
+        HashMap<String, Player> registered = game.findAll();
+        Player[] actual = {registered.get("Света"), registered.get("Дима"), registered.get("Миша"), registered.get("Соня"), registered.get("Данил")};
         Player[] expected = {player1, player3, player5, player7, player9};
         Assertions.assertArrayEquals(expected, actual);
     }
