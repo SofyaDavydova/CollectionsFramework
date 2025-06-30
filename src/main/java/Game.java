@@ -11,7 +11,7 @@ public class Game {
     public Player findByName(String name) {
         for (String key : players.keySet()) {
             Player value = players.get(key);
-            if (value.getName() == name) {
+            if (value.getName().equals(name)) {
                 return value;
             }
         }
