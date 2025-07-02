@@ -9,11 +9,8 @@ public class Game {
     }
 
     public Player findByName(String name) {
-        for (String key : players.keySet()) {
-            Player value = players.get(key);
-            if (value.getName().equals(name)) {
-                return value;
-            }
+        if (players.containsKey(name)) {
+            return players.get(name);
         }
         return null;
     }
